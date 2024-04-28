@@ -5,7 +5,7 @@ import { SyncOptions } from 'sequelize';
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
 
 dotenv.config();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // Definir un modelo para la sincronización de Sequelize
 interface ISyncOptions extends SyncOptions {
@@ -20,7 +20,7 @@ async function main() {
     console.log("Conexión a la Base de Datos exitosa");
 
     // Sincronizar la base de datos
-    const syncOptions: ISyncOptions = { force: false };
+    const syncOptions: ISyncOptions = { force: true };
     await sequelize.sync(syncOptions);
     console.log("La base de datos se ha sincronizado correctamente");
 
