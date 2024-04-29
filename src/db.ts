@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
-import { UserModel } from './models/UserModel';
+import { UserModel } from './models/userModel';
+import { ArticleModel } from './models/articleModel';
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
@@ -7,7 +8,7 @@ const sequelize = new Sequelize({
   username: 'postgres',
   password: 'admin',
   database: 'multikjas',
-  models: [UserModel],
+  models: [UserModel, ArticleModel],
 });
 
 export default sequelize;
