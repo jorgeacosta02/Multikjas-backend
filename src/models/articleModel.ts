@@ -22,14 +22,29 @@ export class ArticleModel extends Model {
     type: DataType.STRING,
     allowNull: false,
   })
-  name!: string;
+  type!: string;
   
   @Column
   brand!: string;
   
   @Column
-  group1!: string;
+  model!: string;
   
   @Column
-  group2!: string;
+  year!: string;
+  
+  @Column
+  condition!: string;
+  
+  @Column
+  description!: string;
+  
+  @Column
+  image!: string;
+  
+  @Column
+  price!: string;
+  
+  @Column
+  status!: string;
 }

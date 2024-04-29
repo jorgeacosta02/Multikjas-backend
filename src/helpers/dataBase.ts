@@ -6,48 +6,60 @@ const dataBase = async () => {
     // Registros de artículos
     const articles = [
         {
-            name: 'Barra perf',
-            brand: 'Sandivk',
-            group1: 'T38',
-            group2: '6m',
+            type: 'Caja de cambios',
+            brand: 'ZF',
+            model: '1',
+            year: '2010',
+            contition: 'usado',
+            description: 'Funcionando correctamente',
+            image: '#',
+            price: '200000',
+            status: true
         },
         {
-            name: 'Barra perf',
-            brand: 'FRD',
-            group1: 'T45',
-            group2: '2m',
+            type: 'Diferencial',
+            brand: 'ZF',
+            model: '3',
+            year: '2014',
+            contition: 'usado',
+            description: 'Funcionando correctamente',
+            image: '#',
+            price: '300000',
+            status: true
         },
         {
-            name: 'Barra ini',
-            brand: 'Sandvik',
-            group1: 'T51',
-            group2: '',
+            type: 'Caja de dirección',
+            brand: 'ZF',
+            model: '5',
+            year: '2019',
+            contition: 'usado',
+            description: 'Funcionando correctamente',
+            image: '#',
+            price: '200000',
+            status: true
         },
         {
-            name: 'Barra ini',
-            brand: 'FRD',
-            group1: 'T45',
-            group2: '',
+            type: 'Caja de cambios',
+            brand: 'ZF',
+            model: '2',
+            year: '2011',
+            contition: 'usado',
+            description: 'Funcionando correctamente',
+            image: '#',
+            price: '220000',
+            status: true
         },
         {
-            name: 'Broca',
-            brand: 'Sandvik',
-            group1: 'T45',
-            group2: 'Lisa',
+            type: 'Capot',
+            brand: 'Mercedes Benz',
+            model: 'A200',
+            year: '2010',
+            contition: 'usado',
+            description: 'Sin pintura',
+            image: '#',
+            price: '200000',
+            status: true
         },
-        {
-            name: 'Broca',
-            brand: 'Atlas',
-            group1: 'T38',
-            group2: 'Estriada',
-        },
-        {
-            name: 'Fil aire',
-            brand: 'filt',
-            group1: 'x29',
-            group2: 'www',
-        },
-      
     ];
 
     const insertedArticles:any = await ArticleModel.bulkCreate(articles);
