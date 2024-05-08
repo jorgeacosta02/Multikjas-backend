@@ -9,6 +9,7 @@ const sequelize = new Sequelize({
   password: 'admin',
   database: 'multikjas',
   models: [UserModel, ArticleModel],
+  logging: false
 });
 
 export default sequelize;

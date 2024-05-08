@@ -6,31 +6,49 @@ import { ITokenUserData } from "../../../Interfaces/userInterfaces";
 
 
 const userLogInController = async (req: Request, res: Response) => {
-    console.log('res.cookie: ', res.cookie);
+    console.log('res.cookie: línea 9', res.cookie);
     // Destructuro los datos de la request
     const {dni, password} = req.body;
     // Veirifico que estén todos los datos necesarios
     if(!dni || !password){
+        console.log('verificando dni y pwd en if');
+        
         return res.status(400).json({msg: 'Por favor envíe su dni y contraseña.'});
     };
 
     try {
+        console.log('entrando al try');
+        
         // busco el ususario en la db por dni
         const user = await UserModel.findOne({
             where: {
               dni
             },
         });
+
+        console.log('después de finOne');
+        
         // envío mensaje de error si no se encuenta el usuario 
         if(!user){
             return res.status(404).json({msg: 'El usuario no existe.'});
         };
+        console.log('comprobó que user existe');
+        
         // comparo la contraseña recibida con la del usuario de la db
         const pwdMatch = await bcrypt.compare(password, user.password);
+
+        console.log('comparó la pwd');
+        console.log('pwdMatch: ',pwdMatch);
+        
+        
         // mensaje de error si la contraseña no coincide
         if(!pwdMatch){
+            console.log('en el if de no hay pwdMatch');
+            
             return res.status(400).json({msg: 'El dni o la contraseña son incorrectos.'})
         };
+        console.log('la pwd es correcta, no entró al if');
+        
         // Defino el objeto con los datos a enviar en el token.
         const tokenData: ITokenUserData = {
             id: user.id,
