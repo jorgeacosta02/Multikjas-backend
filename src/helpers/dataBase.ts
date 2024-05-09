@@ -10,55 +10,55 @@ const dataBase = async () => {
             brand: 'ZF',
             model: '1',
             year: '2010',
-            contition: 'usado',
+            condition: 'usado',
             description: 'Funcionando correctamente',
-            image: '#',
+            images: ['#'],
             price: '200000',
-            status: true
+            status: 'active'
         },
         {
             type: 'Diferencial',
             brand: 'ZF',
             model: '3',
             year: '2014',
-            contition: 'usado',
+            condition: 'usado',
             description: 'Funcionando correctamente',
-            image: '#',
+            images: ['#'],
             price: '300000',
-            status: true
+            status: 'active'
         },
         {
             type: 'Caja de dirección',
             brand: 'ZF',
             model: '5',
             year: '2019',
-            contition: 'usado',
+            condition: 'usado',
             description: 'Funcionando correctamente',
-            image: '#',
+            images: ['#'],
             price: '200000',
-            status: true
+            status: 'active'
         },
         {
             type: 'Caja de cambios',
             brand: 'ZF',
             model: '2',
             year: '2011',
-            contition: 'usado',
+            condition: 'usado',
             description: 'Funcionando correctamente',
-            image: '#',
+            images: ['#'],
             price: '220000',
-            status: true
+            status: 'active'
         },
         {
             type: 'Capot',
             brand: 'Mercedes Benz',
             model: 'A200',
             year: '2010',
-            contition: 'usado',
+            condition: 'usado',
             description: 'Sin pintura',
-            image: '#',
+            images: ['#'],
             price: '200000',
-            status: true
+            status: 'active'
         },
     ];
 

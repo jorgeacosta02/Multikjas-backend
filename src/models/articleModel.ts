@@ -39,8 +39,11 @@ export class ArticleModel extends Model {
   @Column
   description!: string;
   
-  @Column
-  image!: string;
+  @Column({
+    type: DataType.ARRAY(DataType.STRING),
+    allowNull: false,
+  })
+  images!: string[];
   
   @Column
   price!: string;
